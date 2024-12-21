@@ -61,3 +61,5 @@ end
 
 gem "graphql", "~> 2.4"
 gem "graphiql-rails", group: :development
+
+gem "tailwindcss-rails", "~> 3.0"
