@@ -8,3 +8,7 @@ document.addEventListener("turbo:load", () => {
   );
   root.render(<App />);
 });
+
+
+
+

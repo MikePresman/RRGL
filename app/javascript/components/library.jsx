@@ -1,21 +1,32 @@
-import { useEffect, useState } from "react";
-import React from "react";
-import { Link } from "react-router-dom";
+// app/javascript/components/Library/index.js
+import React from 'react';
+import { Query } from 'react-apollo';
+import gql from 'graphql-tag';
 
-const library = () => {
-  const [counter, setCounter] = useState(0);
-
-  const handleBtnClick = () => {
-    console.log(counter)
-    setCounter(counter + 1)
+const LibraryQuery = gql`
+  {
+    items {
+      id
+      title
+      user {
+        email
+      }
+    }
   }
-  return (
-    <>
-      <button onClick={handleBtnClick}>Hello World</button>
+`;
 
-      <div className="bg-red-500 w-50 h-25">hey</div>
-    </>
-  )
-}
-
-export default library;
+export default () => (
+  <Query query={LibraryQuery}>
+    {({ data, loading }) => (
+      <div>
+        {loading
+          ? 'loading...'
+          : data.items.map(({ title, id, user }) => (
+            <div key={id}>
+              <b>{title}</b> {user ? `added by ${user.email}` : null}
+            </div>
+          ))}
+      </div>
+    )}
+  </Query>
+);
