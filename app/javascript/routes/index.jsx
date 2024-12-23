@@ -8,7 +8,7 @@ export default (
   <Provider>
     <Router>
       <Routes>
-        <Route path="/" element={<Library />} />
+        <Route path="/new" element={<Library />} />
       </Routes>
     </Router>
   </Provider>
