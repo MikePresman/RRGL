@@ -20,5 +20,4 @@ Rails.application.routes.draw do
   get "library", to: "library#index"
 
   get "new", to:"library#index"
-    # "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=assets",
 end
