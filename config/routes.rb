@@ -18,6 +18,5 @@ Rails.application.routes.draw do
 
   root 'library#index'
   get "library", to: "library#index"
-
-  get "new", to:"library#index"
+  get "sign_in", to: "user_info#index"
 end

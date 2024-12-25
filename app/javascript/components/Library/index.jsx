@@ -16,7 +16,6 @@ const LibraryQuery = gql`
 `;
 
 export default () => {
-  console.log("hey")
   return (
     <Query query={LibraryQuery}>
       {({ data, loading }) => (
@@ -31,6 +30,5 @@ export default () => {
         </div>
       )}
     </Query>
-
   )
 }
