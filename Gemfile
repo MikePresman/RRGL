@@ -62,7 +62,7 @@ end
 gem "graphql", "~> 2.4"
 gem "graphiql-rails", group: :development
 
-gem "tailwindcss-rails", "~> 3.0"
+gem "tailwindcss-rails", "~> 3.1"
 
 gem "rspec-rails", "= 4.0.0.beta2", :groups => [:development, :test]
 
